@@ -148,13 +148,13 @@ def customize_build_default(EXTENSIONS, OPTIONS):
     import platform
 
     del EXTENSIONS['jpeg12']  # jpeg12 requires custom build
-    del EXTENSIONS['jpegls']  # CharLS 2.1 library not commonly available
-    del EXTENSIONS['jpegxl']  # Brunsli library not commonly available
+    # del EXTENSIONS['jpegls']  # CharLS 2.1 library not commonly available
+    # del EXTENSIONS['jpegxl']  # Brunsli library not commonly available
     del EXTENSIONS['lerc']  # LERC library not commonly available
-    del EXTENSIONS['zfp']  # ZFP library not commonly available
+    # del EXTENSIONS['zfp']  # ZFP library not commonly available
 
-    if 'arch' in platform.platform():
-        del EXTENSIONS['zopfli']  # zopfli/zopfli.h does not exist
+    # if 'arch' in platform.platform():
+    #     del EXTENSIONS['zopfli']  # zopfli/zopfli.h does not exist
 
     if sys.platform == 'win32':
         EXTENSIONS['bz2']['libraries'] = ['libbz2']
